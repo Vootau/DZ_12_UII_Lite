@@ -72,8 +72,8 @@ if __name__ == '__main__':
     collected_data = collect_file_info(DATA_DIRECTORY)
 
     # Сохраняем собранные данные в JSON-файл
-    if not os.path.exists('output'):
-        os.mkdir('output')
+    if not os.path.exists('main_dir/output'):
+        os.mkdir('main_dir/output')
 
     with open(OUTPUT_JSON_PATH, 'w', encoding='utf-8') as out_json:
         json.dump(collected_data, out_json, ensure_ascii=False, indent=4)
