@@ -11,7 +11,8 @@ logging.basicConfig(
     filename=log_filename,
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s]: %(message)s",
-    datefmt='%Y-%m-%d %H:%M:%S'
+    datefmt='%Y-%m-%d %H:%M:%S',
+    encoding='UTF-8'
 )
 
 
@@ -56,6 +57,7 @@ def find_correct_codec(file_path):
 def process_file(file_name):
     # Полный путь к файлу в исходной директории
     input_file_path = os.path.join(RAW_DIR, file_name)
+    base_name, extension = os.path.splitext(file_name)
 
     # Определение кодировки файла
     encoding = find_correct_codec(input_file_path)
@@ -68,7 +70,7 @@ def process_file(file_name):
     transformed_content = content.swapcase()
 
     # Имя нового файла с суффиксом _processed
-    output_file_name = f"processed_{file_name}"
+    output_file_name = f"{base_name}_processed{extension}"
     output_file_path = os.path.join(PROCESSED_DIR, output_file_name)
 
     # Запись обработанного файла

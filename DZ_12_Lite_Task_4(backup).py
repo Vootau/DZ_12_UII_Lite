@@ -14,7 +14,8 @@ logging.basicConfig(
     filename=LOG_FILE_PATH,
     level=logging.INFO,
     format='%(asctime)s | %(levelname)-8s | %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
+    datefmt='%Y-%m-%d %H:%M:%S',
+    encoding='UTF-8'
 )
 
 # Функция вычисляет MD5-хеш файла

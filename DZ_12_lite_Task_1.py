@@ -7,7 +7,7 @@ def log_message(message):
     log_dir = os.path.join('main_dir', 'logs')
     os.makedirs(log_dir, exist_ok=True)
     log_file_path = os.path.join(log_dir, 'creation_log.txt')
-    with open(log_file_path, 'a') as f:
+    with open(log_file_path, 'a', encoding='utf-8') as f:
         f.write(f'{timestamp}: {message}\n')
 
 # Создаем основную директорию для хранения всей структуры в задании

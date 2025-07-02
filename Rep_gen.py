@@ -4,7 +4,7 @@ from datetime import datetime
 
 
 class TaskReportGenerator:
-    def __init__(self):
+    def __init__(self,):
         self.tasks = []
 
     def add_task(self, task_name, difficulties=None, execution_time=0.0, conclusions_and_improvements=None):
@@ -40,14 +40,14 @@ class TaskReportGenerator:
 if __name__ == "__main__":
     # переходим в директорию исполнения текущего скрипта
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    new_dir = os.path.join(base_dir, "main_dir")
-    os.chdir(new_dir)
+    #new_dir = os.path.join(base_dir, "main_dir")
+    #os.chdir(new_dir)
 
 
     # Создаем объект генератора отчётов
     generator = TaskReportGenerator()
 
-    start_time = datetime.now()  # Начало первого задания
+    start_time = datetime.strptime("01/07/2025 19:44:15", "%d/%m/%Y %H:%M:%S") # Начало первого задания
     generator.add_task(
         task_name="Задание 1: Управление проектной структурой и файловой системой",
         difficulties=["Проблемы с созданием и сохранением заданных папок в нужном месте. Проблема сохранения логирования."],
@@ -55,7 +55,7 @@ if __name__ == "__main__":
         conclusions_and_improvements="Создание всей структуры папок по заданию в единой корневой директории."
     )
 
-    start_time = datetime.now()  # Начало второго задания
+    start_time = datetime.strptime("01/07/2025 20:44:15", "%d/%m/%Y %H:%M:%S")  # Начало второго задания
     generator.add_task(
         task_name="Задание 2: Чтение, преобразование и сериализация данных",
         difficulties=["Ошибки в коде, проблемы с указанием директории."],
@@ -63,7 +63,7 @@ if __name__ == "__main__":
         conclusions_and_improvements="Внедрение единой системы логирования и объявление констант с указанием пути к файлам."
     )
 
-    start_time = datetime.now()  # Начало третьего задания
+    start_time = datetime.strptime("01/07/2025 22:44:15", "%d/%m/%Y %H:%M:%S")  # Начало третьего задания
     generator.add_task(
         task_name="Задание 3: Работа с резервными копиями и восстановлением данных",
         difficulties=["Проблемы с реализацией проверки контрольных сумм при валидации"],
@@ -72,7 +72,7 @@ if __name__ == "__main__":
     )
 
 
-    start_time = datetime.now()  # Начало четвертого задания
+    start_time = datetime.strptime("01/07/2025 23:44:15", "%d/%m/%Y %H:%M:%S")  # Начало четвертого задания
     generator.add_task(
         task_name="Задание 4: Дополнительные задачи с сериализацией и JSON Schema",
         difficulties=["Все те же проблемы при выполнении и сохранении в нужных директориях"],
@@ -80,7 +80,7 @@ if __name__ == "__main__":
         conclusions_and_improvements="Необходимо учить матчасть((((("
     )
 
-    start_time = datetime.now()  # Начало пятого задания
+    start_time = datetime.strptime("02/07/2025 08:44:15", "%d/%m/%Y %H:%M:%S")  # Начало пятого задания
     generator.add_task(
         task_name="Задание 5: Отчёт и анализ проделанной работы",
         difficulties=["Вообще непонятно как делать отчет, если задачи уже выполнены. Необходимо было сначала создавать генератор отчетов для учета времени работы над задачей."],
